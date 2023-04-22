@@ -1,0 +1,77 @@
+.favoriteContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    min-height: 600px;
+}
+
+.favoriteContainer h1{
+    color: rgb(7, 7, 116);
+    margin-top: 20px;
+}
+
+.noFav{
+    color: rgb(187, 12, 12) !important;
+}
+
+.favCard{
+    width: 60%;
+    display: flex;
+    background-color: #fff;
+    height: 150px;
+    margin: 10px;
+}
+
+.favImg{
+    height: 150px;
+    width: 200px;
+    margin-right: 20px;
+}
+.favImg img {
+    width: 100%;
+    height: 100%;
+}
+.favDetails{
+    width: 50%;
+    height: 150px;
+}
+
+.favHeader{
+    margin-top: 10px;
+    color: rgb(90, 90, 90);
+}
+
+.favBody{
+    display: flex;
+    justify-content: space-between;
+}
+.favBody p {
+    color: rgb(102, 102, 102);
+}
+.favBody button{
+    background-color: transparent;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 8px;
+    color: rgb(185, 7, 7);
+}
+.favBody button:hover{
+    background-color: rgb(185, 7, 7);
+    color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+    .favCard{
+        width: 95%;
+        height: 120px;
+    }
+    .favImg{
+        height: 120px;
+        width: 120px;
+    }
+    .favDetails{
+        width: 55%;
+        height: 120px;
+    }
+}

@@ -1,0 +1,182 @@
+.details-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+
+}
+
+.img-col {
+    width: 50%;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.details-col {
+    width: 50%;
+    margin-top: 60px;
+    padding: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.details-header{
+    display: flex;
+    justify-content: space-between;
+}
+.details-col h2{
+    color: rgb(7, 7, 105);
+}
+
+.dtl-price {
+    font-size: large;
+    font-weight: 500;
+}
+.details-col p{
+    font-weight: 400;
+    margin-top: 8px;
+    font-size: medium;
+}
+
+.details-cat {
+    font-weight: 500;
+    color: rgb(100, 100, 100);
+}
+
+.qty-form {
+    margin-top: 8px;
+    border: 1px solid rgb(100, 100, 100);
+    width: fit-content;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.qty-form form input{
+    border: none;
+    background-color: transparent;
+}
+
+.details-btns {
+    margin-top: 40px;
+}
+
+.details-cart-btns {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dtls-addto-cart {
+    background-color: #ffd814;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    width: 10rem;
+}
+
+.details-fav-btn {
+    margin-left: 15px;
+    border: 1px solid rgb(100, 100, 100);
+    background-color: transparent;
+    font-size: large;
+    border-radius: 50%;
+    margin-right: 10px;
+    outline: none;
+    height: 40px;
+    width: 40px;
+}
+
+.details-fav-btn-remove{
+    margin-left: 15px;
+    border: 1px solid rgb(100, 100, 100);
+    background-color: red;
+    font-size: large;
+    border-radius: 50%;
+    margin-right: 10px;
+    outline: none;
+    height: 40px;
+    width: 40px;
+}
+
+.details-fav-btn-remove fa-icon{
+    color: white;
+}
+
+.details-buy button{
+    background-color: #ffa41c;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    width: 10rem;
+}
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Add active class to the current slide */
+.mySlides.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+@media only screen and (max-width: 510px) {
+    .details-container {
+        flex-direction: column;
+        padding-bottom: 10rem;
+    }
+    .img-col{
+        width: 100%;
+    }
+    .details-col {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

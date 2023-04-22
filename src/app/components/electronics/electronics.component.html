@@ -1,0 +1,23 @@
+<div class="card-container">
+    <div class="card" *ngFor="let product of products" matRipple >
+        <div class="product-img" routerLink="/details/{{product.id}}"><img src={{product.image}} alt="productPic"></div>
+        <div class="product-detail">
+            <span routerLink="/details/{{product.id}}">{{product.name}}</span>
+            <div class="rating">
+                <fa-icon class="star-icon" [icon]="faStar"></fa-icon>
+                <fa-icon class="star-icon" [icon]="faStar"></fa-icon>
+                <fa-icon class="star-icon" [icon]="faStar"></fa-icon>
+                <fa-icon class="star-icon" [icon]="faStar"></fa-icon>
+                <fa-icon class="star-icon" [icon]="faStarHalfAlt"></fa-icon>
+            </div>
+            <p>Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Interdum velit.</p>
+            <div class="buttons">
+                <div class="price">$ {{product.price}}</div>
+                <button class="add-cart-btn add-btn" *ngIf="!isProductInCart(product.id)" (click)="addToCart(product)" >Add to Cart</button>
+                <button class="add-cart-btn add-btn" *ngIf="isProductInCart(product.id)" (click)="removeToCart(product.id)" >Remove</button>
+                <button class="add-fav-btn add-btn" *ngIf="!isProductInFav(product.id)" (click)="addToFav(product)"><fa-icon class="add-fav-icon" [icon]="faHeart"></fa-icon></button>
+                <button class="remove-fav add-fav-btn add-btn" *ngIf="isProductInFav(product.id)" (click)="removeToFav(product.id)"><fa-icon class="add-fav-icon" [icon]="faHeart"></fa-icon></button>
+            </div>
+        </div>
+    </div>
+</div>

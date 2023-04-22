@@ -1,0 +1,204 @@
+.shop-wrapper{
+    min-height: 700px;
+}
+
+.image-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.explore-shop {
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1.5)), url("https://vastphotos.com/files/uploads/photos/10824/sunrise-trees-panorama-photo-l.jpg?v=20220712073521");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.shop-container {
+    margin-top: 240px;
+    display: flex;
+}
+
+.shop-card {
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card-img{
+    width: 100%;
+    height: 280px;
+    cursor: pointer;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-des{
+    padding-top: 10px;
+    color: rgb(29, 147, 194);
+}
+.card-des p:hover{
+    cursor: pointer;
+    color: rgb(219, 41, 41);
+}
+
+
+@media screen and (max-width: 1100px){
+    .shop-wrapper{
+        min-height: 1100px;
+    }
+    .shop-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 655px){
+    .image-text{
+        font-size: 24px;
+    }
+    .shop-wrapper{
+        min-height: 2000px;
+    }
+}
+
+
+
+
+.explore-body {
+    padding: 20px;
+}
+
+.explore-body h1 {
+    color: rgb(17, 20, 71);
+}
+
+.exploreSlider {
+    display: flex;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.sliderItem {
+    height: 340px;
+    width: 230px;
+    background-color: #ffff;
+    border-radius: 10px;
+    margin: 15px;
+    position: relative;
+}
+
+.sliderImg {
+    height: 200px;
+    width: 230px;
+    background-repeat: no-repeat;
+    background-position: -15px 0px;
+    background-size: cover;
+
+}
+
+.sliderImg img {
+    height: 100%;
+    width: 100%;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.top-right button {
+    border-radius: 50%;
+    outline: none;
+    height: 40px;
+    width: 40px;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: 1px solid rgb(255, 96, 96);
+
+}
+
+.sliderItem:hover .top-right {
+    background-color: #fff;
+}
+
+.add-fav-icon {
+    color: rgb(255, 96, 96);
+
+}
+
+.remove-fav {
+    background-color: rgb(245, 52, 52) !important;
+}
+
+.remove-fav fa-icon {
+    color: #ffff;
+}
+
+.sliderDetails {
+    width: 100%;
+    padding: 5px;
+}
+
+.detailsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailsHeader h3 {
+    cursor: pointer;
+}
+
+.sliderDetails p {
+    font-size: small;
+    text-align: left;
+    color: rgb(100, 100, 100);
+}
+
+.sliderDetails button {
+    width: 100%;
+    border: none;
+}
+
+.exploreSlider::-webkit-scrollbar {
+    height: 7px;
+    border-radius: .5rem;
+    background-color: rgb(201, 201, 201);
+}
+
+.exploreSlider::-webkit-scrollbar-thumb {
+    background-color: rgb(150, 150, 150);
+    border-radius: .5rem;
+}
+
+.exploreSlider::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(107, 107, 107);
+}
+
+@media (max-width: 400px) {
+    .exploreSlider::-webkit-scrollbar {
+        display: none;
+    }
+}

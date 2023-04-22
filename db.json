@@ -1,0 +1,164 @@
+{
+  "customer": [
+    {
+      "email": "randiv@gmail.com",
+      "username": "randiv",
+      "password": "123costa",
+      "id": 1
+    },
+    {
+      "email": "venukrandivcosta1234@gmail.com",
+      "username": "ven",
+      "password": "qwdqwd",
+      "id": 2
+    },
+    {
+      "email": "randiv",
+      "username": "efgrfgv4",
+      "password": "erfgverfgverqfgv",
+      "id": 3
+    },
+    {
+      "email": "edwedfwe",
+      "username": "randiv",
+      "password": "fcwefcwe",
+      "id": 4
+    },
+    {
+      "email": "ashwin@gmail.com",
+      "username": "ashwin",
+      "password": "123ashwin",
+      "id": 5
+    },
+    {
+      "email": "dzxbgdgb",
+      "username": "dgbrfvb ",
+      "password": "dfbdfbdfb",
+      "id": 6
+    },
+    {
+      "email": "dfqwytdfwqed",
+      "username": "randiv",
+      "password": "adcsacsd",
+      "id": 7
+    },
+    {
+      "email": "ashwin@gmail.com",
+      "username": "ashwin",
+      "password": "ashwin12345costa",
+      "id": 8
+    },
+    {
+      "email": "rtgtgr",
+      "username": "tryry",
+      "password": "rtyry",
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "name": "Smart Watch",
+      "price": 50,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXBwbGUlMjB3YXRjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 1
+    },
+    {
+      "name": "Iphone 13pro",
+      "price": 200,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGFwcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 2
+    },
+    {
+      "name": "Stereo Speaker",
+      "price": 150,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1544765293-9bc7486a8dfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3RlcmVvJTIwc3BlYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 3
+    },
+    {
+      "name": "Electric Bike",
+      "price": 30,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1618987688327-dc0b28888fe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGVsZWN0cmljJTIwYmlrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 4
+    },
+    {
+      "name": "Mens T-shirt",
+      "price": 30,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbnMlMjB0c2hpcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "category": "clothing",
+      "id": 5
+    },
+    {
+      "name": "Laptop",
+      "price": 20,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 6
+    },
+    {
+      "name": "digital watch",
+      "price": 160,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1578998323870-83a9a3d609e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHdyaXN0d2F0Y2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 7
+    },
+    {
+      "name": "bluetooth headset",
+      "price": 80,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Ymx1ZXRvb3RoJTIwaGVhZHNldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 8
+    },
+    {
+      "name": "hemax motor",
+      "price": 80,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1627807452369-a2cd0b5ca56f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFjaGluZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 9
+    },
+    {
+      "name": "go pro",
+      "price": 200,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1582596030653-27845acfcfdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGdvcHJvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "electronics",
+      "id": 10
+    },
+    {
+      "name": "under amour",
+      "price": 20,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1604726923839-606d2f0e0870?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dW5kZXIlMjBhcm1vdXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "category": "clothing",
+      "id": 11
+    },
+    {
+      "name": "white t-shirt",
+      "price": 10,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1620799139834-6b8f844fbe61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YXBwYXJlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "category": "clothing",
+      "id": 12
+    },
+    {
+      "name": "Denims",
+      "price": 15,
+      "description": "Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua.",
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8amVhbnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "category": "clothing",
+      "id": 13
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" fixedInViewport fixedBottomGap="0" hasBackdrop closed >
+    <div class="userinfo"><mat-icon class="account-icon">account_circle</mat-icon>
+      <span>Hello,</span><span class="spansignin" *ngIf="userType === 'unauthorized' " (click)="openLoginDialog()">Sign in</span>
+      <span *ngIf="userType === 'authorized' ">{{userName}}</span>
+    </div>
+    <app-categories *ngIf="Mobile" (click)="sidenav.toggle()"></app-categories>
+    <div class="sidenavList">
+      <div class="listCol">
+        <span>Settings</span><span>About Us</span>
+      </div>
+      <div class="listCol">
+        <span>Become a seller</span>
+      </div>
+      <div class="listCol">
+        <span>Offers</span><span>Contact Us</span>
+      </div>
+    </div>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar role="heading">
+      <mat-toolbar-row class="row1">
+        <button mat-icon-button (click)="sidenav.toggle()" *ngIf="userViewMode === 'justView'">
+          <mat-icon class="menu-icon">menu</mat-icon>
+        </button>
+        <span class="logo" routerLink=""><img src="/assets/ecom.png" alt="logo"></span>
+        <app-search-bar *ngIf="Mobile == false && userViewMode === 'buying'"></app-search-bar>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="search-btn" *ngIf="Mobile && userViewMode === 'buying'" (click)="searchClicked()">
+          <mat-icon class="search-icon" fontSet="material-icons-outlined">search</mat-icon>
+        </button>
+        <nav *ngIf="userType === 'unauthorized' ">
+          <a class="nav-row1" (click)="openLoginDialog()">Login</a>
+          <a class="nav-row1" (click)="openSignUpDialog()">Signup</a>
+        </nav>
+        <div *ngIf="userType === 'unauthorized' ">
+          <a class="signup" (click)="openSignUpDialog()">Signup</a>
+        </div>
+        <button mat-icon-button class="account-btn" [matMenuTriggerFor]="menu" matTooltip="profile" *ngIf="userType === 'authorized' ">
+          <mat-icon class="acc-icon">account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item disabled><mat-icon fontSet="material-icons-outlined">dashboard</mat-icon><span>Dashboard</span></button>
+          <button mat-menu-item (click)="onLogout()"><mat-icon fontSet="material-icons-outlined">logout</mat-icon><span>Logout</span></button>
+        </mat-menu>
+        <button mat-icon-button class="favorite-btn" routerLink="/favorite" matTooltip="favorite" routerLinkActive="active">
+          <mat-icon class="favorite-icon" fontSet="material-icons-outlined">favorite_border</mat-icon>
+        </button>
+        <button mat-icon-button class="cart-btn" routerLink="/cart" matTooltip="cart" routerLinkActive="active" >
+          <mat-icon class="cart-icon" fontSet="material-icons-outlined" matBadge="{{cartBadgeNum}}" matBadgePosition="after" matBadgeSize="small" matBadgeColor="accent">shopping_cart</mat-icon>
+        </button>
+        
+
+      </mat-toolbar-row>
+      <mat-toolbar-row class="row2" *ngIf="userViewMode === 'buying'">
+        <button mat-icon-button class="sidenav-btn" (click)="sidenav.toggle()">
+          <mat-icon class="menu-icon">menu</mat-icon>
+        </button>
+        <div *ngIf="Mobile" class="mobile-nav">
+          <a routerLink="" routerLinkActive="home-active" >Explore</a>
+          <a>For you</a>
+        </div>
+        <app-categories *ngIf="Mobile == false"></app-categories>
+      </mat-toolbar-row>
+      <mat-toolbar-row *ngIf="isSearchClicked" class="middle-row">
+        <app-search-bar></app-search-bar>
+        <button mat-icon-button (click)="searchBarClose()">
+          <mat-icon>clear</mat-icon>
+        </button>
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="footer">
+      <div class="footer-left">
+        <img src="/assets/ecom.png" alt="logo">
+        <P>Lorem ipsum dolor sit amet, ut labore et dolore magna aliqua. Interdum velit laoreet id donec ultrices tincidunt arcu.Interdum velit laoreet id donecInterdum velit laoreet id donecInterdum velit laoreet id donec.</P>
+        <div class="socials">
+          <a href="#"><fa-icon class="socialIcons" [icon]="faFacebook"></fa-icon></a>
+          <a href="#"><fa-icon class="socialIcons" [icon]="faTwitter"></fa-icon></a>
+          <a href="#"><fa-icon class="socialIcons" [icon]="faDribbble"></fa-icon></a>
+          <a href="#"><fa-icon class="socialIcons" [icon]="faYoutube"></fa-icon></a>
+        </div>
+      </div>
+      <ul class="footer-right">
+        <li>
+          <h2>Shop</h2>
+          <ul class="box">
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Sign</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Discounts</a></li>
+          </ul>
+        </li>
+        <li class="features">
+          <h2>About</h2>
+          <ul class="box">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Sell Products</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Affiliates</a></li>
+          </ul>
+        </li>
+        <li>
+          <h2>Help</h2>
+          <ul class="box">
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Investor Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="footer-bottom">
+        <p>All Right reserved by &copy; RandivCosta 2023</p>
+      </div>
+    </div>
+      
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

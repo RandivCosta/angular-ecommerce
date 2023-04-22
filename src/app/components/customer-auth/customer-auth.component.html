@@ -1,0 +1,43 @@
+<div class="customerAuth" #dialog>
+    <div class="customerSignup" mat-dialog-content>
+        <mat-tab-group dynamicHeight [selectedIndex]="selectedTabIndex" color="accent">
+            <mat-tab label="Sign-up">
+                <h1>Join E-Comm</h1>
+                <form #customerSignup="ngForm" (ngSubmit)="onSignup(customerSignup.value)">
+                    <div class="signup-col">
+                        <mat-form-field appearance="outline" color="warn">
+                            <input matInput placeholder="Email" required name="email" ngModel>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" color="warn">
+                            <input matInput placeholder="Username" required name="username" ngModel>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" color="warn">
+                            <input matInput placeholder="Password" required name="password" ngModel>
+                        </mat-form-field>
+                    </div>
+                    <div class="signup-form-btn">
+                        <button type="submit" [disabled]="customerSignup.invalid" cdkFocusInitial>Sign up</button>
+                    </div>
+                    <a (click)="alreadyHaveAcc()" style="cursor: pointer;">Already have account? login</a>
+                </form>
+            </mat-tab>
+            <mat-tab label="Login">
+                <h1>Wellcome back</h1>
+                <form #customerLogin="ngForm" (ngSubmit)="onLogin(customerLogin.value)">
+                    <div class="signup-col">
+                        <mat-form-field appearance="outline" color="warn">
+                            <input matInput placeholder="Email" required name="email" ngModel>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" color="warn">
+                            <input matInput placeholder="Password" required name="password" ngModel>
+                        </mat-form-field>
+                    </div>
+                    <div class="signup-form-btn">
+                        <button type="submit" [disabled]="customerLogin.invalid" cdkFocusInitial>Login</button>
+                    </div>
+                    <a (click)="dontHaveAcc()" style="cursor: pointer;">Don't have account? create</a>
+                </form>
+            </mat-tab>
+          </mat-tab-group>
+    </div>
+</div>

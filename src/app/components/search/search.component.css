@@ -1,0 +1,69 @@
+.search-result-page{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(135, 144, 148);
+}
+.search-result-page h1{
+    padding: 10px;
+    font-weight: 100;
+}
+.srch-result-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.result-item-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #a3a3a3;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.result-img{
+    margin-right: 80px;
+    height: 200px;
+    width: 300px;
+}
+.result-img img{
+    height: 100%;
+    width: 100%;
+}
+.result-details{
+    display: flex;
+    flex-direction: column;
+}
+.result-details p span{
+    margin-right: 20px;
+}
+.result-cart-btn{
+    width: 200px;
+    border: 1px solid #a7a6a6;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #506c96;
+}
+
+
+
+@media only screen and (max-width: 510px) {
+    .search-result-page{
+        margin: 0;
+    }
+    .result-item-row{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .result-img{
+        margin-right: 0;
+    }
+    .result-details{
+        align-items: center;
+        margin: 20px;
+    }
+    .result-des{
+        text-align: center;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="search-result-page" [ngStyle]="{'height' :noSearchResults ? '600px': '' }">
+    <h1 *ngIf="!noSearchResults">results for "{{resultValue}}" :</h1>
+    <h1 *ngIf="noSearchResults">No results for "{{resultValue}}"</h1>
+    <div class="srch-result-container">
+        <div class="result-item-row" *ngFor="let item of searchResult" matRipple>
+            <div class="result-img" routerLink="/details/{{item.id}}">
+                <img src={{item.image}}>
+            </div>
+            <div class="result-details">
+                <h2 routerLink="/details/{{item.id}}">{{item.name}}</h2>
+                <p class="result-des">{{item.description}}</p>
+                <p><b>{{item.price}}</b></p>
+                <p><span>Color : black</span><span>Category : {{item.category}}</span></p>
+                <button class="result-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

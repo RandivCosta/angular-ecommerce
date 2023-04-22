@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <h1>Shopping Cart</h1>
+    <div class="project" *ngIf="cartProducts">
+        <div class="shop">
+            <div class="box" *ngFor="let product of cartProducts">
+                <img src={{product.image}}>
+                <div class="content">
+                    <h3>{{product.name}}</h3>
+                    <h4>{{product.price}}</h4>
+                    <p class="unit">Quantity: <input name="" value={{product.quantity}}></p>
+                    <p class="btn-area" (click)="removeToCart(product.id)"><fa-icon [icon]="faTrashAlt" aria-hidden="true"></fa-icon> <span class="btn2">Remove</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right-bar">
+            <p><span>Subtotal</span> <span>$ {{subTotal}}</span></p>
+            <hr>
+            <p><span>Tax (5%)</span> <span>$0</span></p>
+            <hr>
+            <p><span>Shipping</span> <span>$15</span></p>
+            <hr>
+            <p><span>Total</span> <span>$ {{total}}</span></p><a href="#"><fa-icon [icon]="faCartShopping" aria-hidden="true"></fa-icon>Checkout</a>
+        </div>
+    </div>
+    <div class="cart-empty" *ngIf="!cartProducts">
+        <h1>Your Cart is empty!</h1>
+    </div>
+</div>

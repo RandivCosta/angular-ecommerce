@@ -1,0 +1,9 @@
+<div class="searchbar-container">
+  <input type="text" placeholder="Search Products" #searchInput (keyup)="searchProduct($event)" [matAutocomplete]="auto">
+  <button mat-icon-button class="searchbar-btn" (click)="submitSearch(searchInput.value)" matTooltip="search"><mat-icon>search</mat-icon></button>
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let item of searchResult" [value]="item.name" routerLink="/search/{{item.name}}">
+      {{item.name}}
+    </mat-option>
+  </mat-autocomplete>
+</div>

@@ -1,0 +1,18 @@
+<div class="favoriteContainer">
+    <h1>Your Favourites!</h1>
+    <h1 *ngIf="!favProducts" class="noFav">You don't have any Favourites.</h1>
+    <div class="favCard" *ngFor="let product of favProducts">
+        <div class="favImg">
+            <img src={{product.image}} alt="pic">
+        </div>
+        <div class="favDetails">
+            <div class="favHeader">
+                <h2>{{product.name}}</h2>
+            </div>
+            <div class="favBody">
+                <p>$ {{product.price}}</p>
+                <button (click)="removeToFav(product.id)">remove</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<div class="shop-wrapper">
+    <div class="explore-shop">
+        <div class="image-text">Inspired by trends</div>
+        <div class="shop-container">
+            <div class="shop-card">
+                <div class="card-title">
+                    <h2>Shop by Category</h2>
+                </div>
+                <div class="card-img" routerLink="/electronics">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGVsZWN0cm9uaWNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="pic">
+                </div>
+                <div class="card-des">
+                    <p routerLink="/electronics">Shop now >></p>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="card-title">
+                    <h2>Discover fashion trends</h2>
+                </div>
+                <div class="card-img" routerLink="/clothing">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="pic">
+                </div>
+                <div class="card-des">
+                    <p routerLink="/clothing">Shop now >></p>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="card-title">
+                    <h2>For your Fitness Needs</h2>
+                </div>
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="pic">
+                </div>
+                <div class="card-des">
+                    <p>Shop now >></p>
+                </div>
+            </div>
+            <div class="shop-card">
+                <div class="card-title">
+                    <h2>Top Deals</h2>
+                </div>
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFrZSUyMHVwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="pic">
+                </div>
+                <div class="card-des">
+                    <p>Shop now >></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="explore-body">
+    <h1>Products picked for you</h1>
+    <div class="exploreSlider" *ngIf="popularProducts">
+        <div class="sliderItem" *ngFor="let item of popularProducts">
+            <div class="sliderImg">
+                <img src={{item.image}} alt="picture" routerLink="/details/{{item.id}}">
+                <div class="top-right">
+                    <button *ngIf="!isProductInFav(item.id)" (click)="addToFav(item)"><fa-icon class="add-fav-icon" [icon]="faHeart"></fa-icon></button>
+                    <button class="remove-fav" *ngIf="isProductInFav(item.id)" (click)="removeToFav(item.id)"><fa-icon class="add-fav-icon" [icon]="faHeart"></fa-icon></button>
+                </div>
+            </div>
+            <div class="sliderDetails">
+                <div class="detailsHeader">
+                    <h3 routerLink="/details/{{item.id}}">{{item.name}}</h3>
+                    <p>$ {{item.price}}</p>
+                </div>
+                <p>{{item.description}}</p>
+                <button *ngIf="!isProductInCart(item.id)" (click)="addToCart(item)">Add to Cart</button>
+                <button *ngIf="isProductInCart(item.id)" (click)="removeToCart(item.id)">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
